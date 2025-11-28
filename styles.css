@@ -1,0 +1,86 @@
+body {
+    background-image: url("images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.61);
+    background-blend-mode:soft-light;
+}
+
+.background {
+    background-image: url("images/background.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-title {
+    display: block;
+    margin: auto;
+}
+
+/* GLOBAL FIX */
+* {
+    box-sizing: border-box;
+}
+
+/* Container */
+.question-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #2b2b2b;
+    
+    /* NEW BORDER + SHADOW */
+    border: 2px solid #3a3a3a;              /* Subtle border */
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);    /* Surrounding shadow */
+
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    color: #f1f1f1;
+}
+
+
+/* Label */
+.question-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Input */
+.question-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background: #3a3a3a;
+    color: #fff;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.question-form input[type="text"]:focus {
+    border-color: #888;
+}
+
+/* Button */
+.question-form button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.question-form button:hover {
+    background: #666;
+}
