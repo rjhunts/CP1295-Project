@@ -1,7 +1,10 @@
+import {game} from "./game.js";
 
 const $ = (id) => document.getElementById(id);
 
 document.addEventListener("DOMContentLoaded", () => {
+    const start_form = $("start-form");
+    const question_form = $("question-form");
     const container = $("answer-buttons");
     const buttons = container.querySelectorAll("button");
     const answer = $("selected-answer");
@@ -17,8 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // set answer value to button's data-value
             answer.value = button.dataset.value;
-
-            console.log("Selected answer:", answer.value);
         });
+    });
+
+    start_form.addEventListener("submit", (evt) => {
+        evt.preventDefault();
+        evt.target.classList.add("hidden");
+        question_form.classList.remove("hidden");
+        game();
+    });
+
+    question_form.addEventListener("submit", (evt) => {
+        evt.preventDefault();
     });
 });
