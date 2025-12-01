@@ -42,112 +42,112 @@ const questions = {
     },
 
     5: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "Which Roblox game became the first to reach 1 billion visits?",
+        "Correct": "Natural Disaster Survival",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Jailbreak",
+            "MeepCity",
+            "Apocalypse Rising"
         ]
     },
 
     6: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What is the name of the editor used to create and code Roblox games?",
+        "Correct": "Roblox Studio",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Roblox Creator Hub",
+            "Build-It Engine",
+            "DevLab"
         ]
     },
 
     7: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What programming language does Roblox Studio primarily use?",
+        "Correct": "Lua (Luau)",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Python",
+            "Java",
+            "C#"
         ]
     },
 
     8: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What is the default animation played when a character dies in Roblox?",
+        "Correct": "Ragdoll",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Collapse",
+            "Tumble",
+            "Fade Out"
         ]
     },
 
     9: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What is the name of Roblox’s monthly premium subscription?",
+        "Correct": "Roblox Premium",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Roblox Gold",
+            "R-Prime",
+            "Builders Plus"
         ]
     },
 
     10: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What does “R15” refer to in Roblox avatars?",
+        "Correct": "An avatar rig with 15 body parts",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "A premium avatar package",
+            "An avatar level system",
+            "A Roblox event"
         ]
     },
 
     11: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What is the default terrain material used when generating a new world?",
+        "Correct": "Grass",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Rock",
+            "Sand",
+            "Mud"
         ]
     },
 
     12: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "Which Roblox game is known for its “murderer, sheriff, innocent” roles?",
+        "Correct": "Murder Mystery 2",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Piggy",
+            "Jailbreak",
+            "Arsenal"
         ]
     },
 
     13: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What do you call the place where all your Roblox games are saved and organized?",
+        "Correct": "Your Places",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Development Tab",
+            "Creator Panel",
+            "Game Storage"
         ]
     },
 
     14: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What popular Roblox game lets you adopt pets and decorate houses?",
+        "Correct": "Adopt Me!",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Royale High",
+            "Welcome to Bloxburg",
+            "Pet Simulator X"
         ]
     },
 
     15: {
-        "Question": "What is the name of Roblox's physics engine?",
-        "Correct": "PBD (Position-Based Dynamics)",
+        "Question": "What does the Studio “Play” button do when developing a game?",
+        "Correct": "Starts the game in play-testing mode",
         "Incorrect": [
-            "Nexus Engine",
-            "RBLX Engine",
-            "Kinetic Builder"
+            "Publishes your game",
+            "Opens the test console",
+            "Runs only server-side scripts"
         ]
     },
 };
