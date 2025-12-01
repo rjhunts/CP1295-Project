@@ -1,4 +1,4 @@
-import {game} from "./game.js";
+import {main} from "./game.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         evt.preventDefault();
         evt.target.classList.add("hidden");
         question_form.classList.remove("hidden");
-        game();
+        main();
     });
 
     question_form.addEventListener("submit", (evt) => {
