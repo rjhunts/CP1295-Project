@@ -20,10 +20,8 @@ function getQuestions() {
 function game(question) {
     const answers = question.Incorrect;
     const randomIndex = Math.floor(Math.random() * 4);
-    console.log(randomIndex);
 
     answers.splice(randomIndex, 0, question.Correct);
-    console.log(answers)
     
     const question_title = $("question-title");
     question_title.textContent = question.Question;
@@ -48,6 +46,15 @@ function game(question) {
             clearInterval(intervalId);
         }
     }, 1000);
+
+    const question_form = $("question-form");
+    question_form.addEventListener("submit", (evt) => {
+        evt.preventDefault();
+
+        const selected = $("selected-answer");
+        clearInterval(intervalId);
+        return selected.value;
+    });
 } 
 
 function main() {
@@ -56,14 +63,20 @@ function main() {
     let count = 1
     console.log(count)
     
+    let correctAnswers = 0
+
     let question = questions.pop(0);
-    game(question);
+    if (game(question) == question.Correct) {
+        correctAnswers++
+    }
 
     const intervalId = setInterval(() => {
         count++
         console.log(count)
         question = questions.pop(0);
-        game(question);
+        if (game(question) == question.Correct) {
+            correctAnswers++
+        }
         if (count >= 15) {
             clearInterval(intervalId);
         }
