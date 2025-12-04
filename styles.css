@@ -1,21 +1,37 @@
+/* Ensures background covers all screens responsively */
 body {
-    background-image: url("images/background.jpeg");
+    background-image: url("./images/background.jpeg");
     background-repeat: no-repeat;
+    background-attachment: fixed;   /* Keeps it stable while resizing */
     background-size: cover;
+    background-position: center;
     background-color: rgba(0, 0, 0, 0.61);
-    background-blend-mode:soft-light;
+    background-blend-mode: soft-light;
+
+    margin: 0;                       /* Fix spacing issues */
+    min-height: 100vh;               /* Ensures full height */
 }
 
+/* Hides class */
+.hidden {
+    display: none;
+}
+
+/* For additional background containers if used */
 .background {
-    background-image: url("images/background.jpeg");
+    background-image: url("./images/background.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+/* Center title image responsively */
 .img-title {
+    padding-top: 50px;
     display: block;
     margin: auto;
+    max-width: 90%;          /* Prevents overflow */
+    height: auto;
 }
 
 /* GLOBAL FIX */
@@ -23,64 +39,116 @@ body {
     box-sizing: border-box;
 }
 
-/* Container */
-.question-form {
-    max-width: 400px;
+/* Responsive form container */
+form {
+    width: 90%;               /* Fluid width */
+    max-width: 500px;         /* Larger max for wide screens */
     margin: 40px auto;
     padding: 20px;
-    background: #2b2b2b;
-    
-    /* NEW BORDER + SHADOW */
-    border: 2px solid #3a3a3a;              /* Subtle border */
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);    /* Surrounding shadow */
 
+    background: #2b2b2b;
+    border: 2px solid #3a3a3a;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
     border-radius: 12px;
+
     font-family: Arial, sans-serif;
     color: #f1f1f1;
 }
 
+#timer {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #e10000;
+    border-color: #ff0000;
+    box-shadow: 0 0 8px #ff0000;
+    border-radius: 8px;
+    border: 1px solid #ff0000;
+    border-radius: 8px;
+}
 
 /* Label */
-.question-form label {
+form label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 1rem;
+    margin-bottom: 15px;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Scales with screen size */
     font-weight: 600;
-    color: #ffffff;
 }
 
-/* Input */
-.question-form input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #555;
-    border-radius: 8px;
-    background: #3a3a3a;
-    color: #fff;
-    outline: none;
-    transition: border 0.2s ease;
-}
-
-.question-form input[type="text"]:focus {
-    border-color: #888;
-}
-
-/* Button */
-.question-form button {
-    margin-top: 15px;
+/* Start Button */
+#start {
     width: 100%;
     padding: 12px;
     background: #444;
+    border-radius: 8px;
     color: #fff;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     font-weight: 600;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
     transition: background 0.2s ease;
 }
 
-.question-form button:hover {
+#start:hover {
     background: #666;
+}
+
+/* Button Grid */
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#answer-buttons button {
+    padding: 12px;
+    background: #3a3a3a;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #fff;
+    font-size: clamp(0.9rem, 2vw, 1rem);   /* Responsive text */
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover */
+#answer-buttons button:hover {
+    background: #555;
+    border-color: #777;
+}
+
+/* SELECTED STATE */
+#answer-buttons button.selected {
+    background: #0066ff;
+    border-color: #3399ff;
+    box-shadow: 0 0 8px #0066ff;
+}
+
+/* Submit Button */
+#question-form button[id="submit-form"] {
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#question-form button[id="submit-form"]:hover {
+    background: #666;
+}
+
+/* ------ RESPONSIVE BREAKPOINTS ------ */
+
+/* On phones: switch to single column layout */
+@media (max-width: 500px) {
+    #answer-buttons {
+        grid-template-columns: 1fr;
+    }
 }
