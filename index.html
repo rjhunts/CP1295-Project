@@ -8,12 +8,28 @@
 </head>
 <body>
     <img class="img-title" src="images/roblox.png" alt="ROBLOX">
-    <div class="form-container">
-        <form class="question-form" action="#" method="post">
-            <label for="user-question">Your Question</label>
-            <input type="text" id="user-question" name="user-question" placeholder="Type your question..." required>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+
+    <form id="start-form" action="#" method="post">
+        <label>Welcome to ROBLOX Trivia</label>
+        <button id="start" type="submit">Start</button>
+    </form>
+    
+    <form id="question-form" action="#" method="post" class="hidden">
+        <label id="timer">Timer: 15</label>
+        <label id="question-title">Your Question</label>
+
+        <!-- Hidden field where the selected answer will be stored -->
+        <input type="hidden" id="selected-answer" name="selected-answer">
+
+        <div id="answer-buttons">
+            <button type="button" data-value="Option 1">Option 1</button>
+            <button type="button" data-value="Option 2">Option 2</button>
+            <button type="button" data-value="Option 3">Option 3</button>
+            <button type="button" data-value="Option 4">Option 4</button>
+        </div>
+
+        <button id="submit-form" type="submit">Submit</button>
+    </form>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
