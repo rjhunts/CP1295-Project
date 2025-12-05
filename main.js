@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const question_form = $("question-form");
     const container = $("answer-buttons");
     const buttons = container.querySelectorAll("button");
-    const answer = $("selected-answer");
+    const selected = $("selected-answer");
     
     buttons.forEach(button => {
         button.addEventListener("click", () => {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.classList.add("selected");
 
             // set answer value to button's data-value
-            answer.value = button.dataset.value;
+            selected.value = button.textContent;
         });
     });
 
@@ -28,9 +28,5 @@ document.addEventListener("DOMContentLoaded", () => {
         evt.target.classList.add("hidden");
         question_form.classList.remove("hidden");
         main();
-    });
-
-    question_form.addEventListener("submit", (evt) => {
-        evt.preventDefault();
     });
 });

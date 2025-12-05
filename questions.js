@@ -1,12 +1,12 @@
-export {questions};
+export {questionsObj};
 
-const questions = {
+const questionsObj = {
     1: {
         "Question": "What year was Roblox officially released to the public?",
         "Correct": "2006",
         "Incorrect": [
             "2004",
-            "2006",
+            "2008",
             "2010"
         ]
     },
