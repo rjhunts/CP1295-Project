@@ -43,8 +43,8 @@ function askQuestion(question) {
 
     clearInterval(timerInterval);
     const displayTimer = $("timer");
-    displayTimer.textContent = "Timer: 15";
-    let timeCount = 15;
+    displayTimer.textContent = "Timer: 5";
+    let timeCount = 5;
     timerInterval = setInterval(() => {
         timeCount--;
         displayTimer.textContent = `Timer: ${timeCount}`
@@ -52,11 +52,15 @@ function askQuestion(question) {
             clearInterval(timerInterval);
             let selectedButton;
             for (let i = 0; i <= 3; i++) {
-                buttons[i].classList.remove("selected");
-                selectedButton = buttons[i];
+                if (buttons[i].classList.contains("selected")) {
+                    buttons[i].classList.remove("selected");
+                    selectedButton = buttons[i];
+                };
             };
-            checkAnswer(selectedButton, question);
-            askQuestion()
+            if (question) {
+                checkAnswer(selectedButton, question);
+            }
+            askQuestion(random_questions.pop(0))
         }
     }, 1000)
 };
@@ -76,7 +80,7 @@ function displayResults() {
 };
 
 function checkAnswer(selected, question) {
-    if (selected.textContent == question.Correct) {
+    if (selected && selected.textContent == question.Correct) {
         correctAnswers++;
     };
 };
