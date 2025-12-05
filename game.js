@@ -1,5 +1,6 @@
-import {questionsObj} from "./questions.js";
 export {main};
+
+let questionsObj;
 
 const $ = (id) => document.getElementById(id);
 
@@ -26,7 +27,7 @@ function askQuestion(question) {
         displayResults();
         return;
     }
-    console.log(counter)
+    //console.log(counter)
 
     const questionTitle = $("question-title");
     questionTitle.textContent = question.Question;
@@ -34,7 +35,7 @@ function askQuestion(question) {
     let answers = question.Incorrect;
     const randomIndex = Math.floor(Math.random() * (answers.length + 1));
     answers.splice(randomIndex, 0, question.Correct)
-    console.log(answers);
+    //console.log(answers);
 
     let buttons = $("answer-buttons").children;
     for (let i = 0; i <= 3; i++) {
@@ -43,8 +44,8 @@ function askQuestion(question) {
 
     clearInterval(timerInterval);
     const displayTimer = $("timer");
-    displayTimer.textContent = "Timer: 5";
-    let timeCount = 5;
+    displayTimer.textContent = "Timer: 10";
+    let timeCount = 10;
     timerInterval = setInterval(() => {
         timeCount--;
         displayTimer.textContent = `Timer: ${timeCount}`
@@ -67,14 +68,19 @@ function askQuestion(question) {
 
 const start_form = $("start-form");
 const question_form = $("question-form");
+const create_question = $("create-question");
+const create_question_form = $("create-question-form");
 const answers_form = $("answers-form");
 function displayResults() {
     question_form.classList.add("hidden");
+    create_question_form.classList.add("hidden");
+    create_question.classList.remove("hidden");
     answers_form.classList.remove("hidden");
     start_form.classList.remove("hidden");
+    start_form.children[0].textContent = "Play Again?";
     $("answers").textContent = "Correct Answers: " + correctAnswers + "/10";
-    console.log("Display Results")
-    console.log(correctAnswers + "/10");
+    //console.log("Display Results")
+    //console.log(correctAnswers + "/10");
     counter = 0;
     correctAnswers = 0;
 };
@@ -87,11 +93,14 @@ function checkAnswer(selected, question) {
 
 let random_questions;
 let question;
-function main() {
+function main(qObject) {
+    questionsObj = qObject;
     answers_form.classList.add("hidden");
+    create_question.classList.add("hidden");
+    create_question_form.classList.add("hidden");
     random_questions = getQuestions();
     question = random_questions.pop(0)
-    console.log(question)
+    //console.log(question)
     askQuestion(question);
 };
 
@@ -108,7 +117,7 @@ question_form.addEventListener("submit", (evt) => {
     };
     if (selected) {
         selectedButton.classList.remove("selected");
-        console.log(question)
+        //console.log(question)
         checkAnswer(selectedButton, question);
         question = random_questions.pop(0)
         askQuestion(question);
