@@ -17,6 +17,66 @@ body {
     display: none;
 }
 
+/* Text Inputs (Matches Your Form Style) */
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+
+    background: #3a3a3a;
+    color: #fff;
+
+    border: 1px solid #555;
+    border-radius: 8px;
+
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#save-question {
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#save-question:hover {
+    background: #666;
+}
+
+#cancel {
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#cancel:hover {
+    background-color: #666;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    background: #444;
+    border-color: #777;
+    box-shadow: 0 0 6px #0066ff;
+}
+
 /* For additional background containers if used */
 .background {
     background-image: url("./images/background.jpeg");
