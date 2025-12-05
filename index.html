@@ -15,8 +15,36 @@
 
     <form id="start-form" action="#" method="post">
         <label>Welcome to ROBLOX Trivia</label>
-        <button id="start" type="submit">Start</button>
+        <button id="start" type="submit">Start Quiz</button>
     </form>
+
+    <form id="create-question" action="#" method="post">
+        <label>Create a Trivia Question</label>
+        <button id="start" type="submit">Create Question</button>
+    </form>
+
+    <form id="create-question-form" action="#" method="post" class="hidden">
+        <label for="question-input">Question:</label>
+        <input type="text" id="question-input" name="question" required>
+
+        <label for="correct-answer-input">Correct Answer:</label>
+        <input type="text" id="correct-answer-input" name="correct-answer" required>
+
+        <label for="incorrect-1-input">Incorrect Answer 1:</label>
+        <input type="text" id="incorrect-1-input" name="incorrect-1" required>
+
+        <label for="incorrect-2-input">Incorrect Answer 2:</label>
+        <input type="text" id="incorrect-2-input" name="incorrect-2" required>
+
+        <label for="incorrect-3-input">Incorrect Answer 3:</label>
+        <input type="text" id="incorrect-3-input" name="incorrect-3" required>
+
+        <br><br>
+        <button id="save-question" type="submit">Save Question</button>
+        <br><br>
+        <button id="cancel" type="button">Cancel</button>
+    </form>
+
 
     <form id="question-form" action="#" method="post" class="hidden">
         <label id="timer">Timer: 15</label>
