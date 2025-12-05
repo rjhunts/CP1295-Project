@@ -23,10 +23,10 @@ const questionsObj = {
     
     3: {
         "Question": "What is the maximum number of friends a player can have on Roblox?",
-        "Correct": "200",
+        "Correct": "1000",
         "Incorrect": [
-            "50",
             "100",
+            "200",
             "Unlimited"
         ]
     },
@@ -43,10 +43,10 @@ const questionsObj = {
 
     5: {
         "Question": "Which Roblox game became the first to reach 1 billion visits?",
-        "Correct": "Natural Disaster Survival",
+        "Correct": "MeepCity",
         "Incorrect": [
             "Jailbreak",
-            "MeepCity",
+            "Natural Disaster Survival",
             "Apocalypse Rising"
         ]
     },
